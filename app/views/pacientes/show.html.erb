@@ -1,10 +1,56 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-<%= render @paciente %>
+<p>
+  <strong>Nome:</strong>
+  <%= @paciente.nome %>
+</p>
 
-<div>
-  <%= link_to "Edit this paciente", edit_paciente_path(@paciente) %> |
-  <%= link_to "Back to pacientes", pacientes_path %>
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @paciente.data_nascimento %>
+</p>
 
-  <%= button_to "Destroy this paciente", @paciente, method: :delete %>
-</div>
+<p>
+  <strong>Cpf:</strong>
+  <%= @paciente.cpf %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @paciente.email %>
+</p>
+
+<p>
+  <strong>CEP:</strong>
+  <%= @paciente.endereco.cep %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @paciente.endereco.cidade %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @paciente.endereco.bairro %>
+</p>
+
+<p>
+  <strong>Logradouro:</strong>
+  <%= @paciente.endereco.logradouro %>
+</p>
+
+<p>
+  <strong>Complemento:</strong>
+  <%= @paciente.endereco.complemento %>
+</p>
+
+<p>
+  <%= button_to 'Destroy', @paciente, method: :delete %>
+</p>
+
+
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>
+
+
